@@ -1,62 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gift Battle — Кейсы</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Gifts Battle — Кейсы</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<div class="top-bar">
-    <div class="back">←</div>
-    <div class="title">Gifts Battle</div>
-    <div class="menu">☰</div>
-</div>
-
-<div class="scroll-items">
-    <div class="item-card">
-        <img src="img/peach.png">
-        <div class="item-cost">★ 13 000</div>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="left">
+      <button class="icon-btn" aria-label="back">←</button>
+      <div class="profile">
+        <div class="avatar">M</div>
+        <div class="name">Maximko</div>
+      </div>
     </div>
-    <div class="item-card">
-        <img src="img/calendar.png">
-        <div class="item-cost">★ 260</div>
+    <div class="balances">
+      <div class="pill pill-stars">★ <span id="stars">50</span></div>
+      <div class="pill pill-tickets">🎟 <span id="tickets">9</span></div>
     </div>
-    <div class="item-card">
-        <img src="img/shard.png">
-        <div class="item-cost">★ 18 000</div>
+    <button class="icon-btn" aria-label="menu">⋮</button>
+  </header>
+
+  <!-- Section title (category) -->
+  <h1 class="page-title" id="category">ДУБАЙСКИЙ</h1>
+
+  <!-- Horizontal items strip with glass pointer -->
+  <section class="strip-wrap">
+    <div class="pointer-glass">
+      <div class="pointer-stem"></div>
+      <div class="pointer-tip"></div>
     </div>
-</div>
-
-<div class="open-box-btn">
-    Открытие <span class="loader"></span>
-</div>
-
-<h2 class="case-title">СОДЕРЖИМОЕ КЕЙСА</h2>
-
-<div class="case-grid">
-    <div class="case-item">
-        <img src="img/pepe.png">
-        <div class="case-name">Plush Pepe (Random)</div>
-        <div class="case-cost">★ 130000 / 💎650</div>
+    <div class="strip" id="strip">
+      <!-- Cards are injected by JS from data below -->
     </div>
+  </section>
 
-    <div class="case-item">
-        <img src="img/bag.png">
-        <div class="case-name">Loot Bag City Life</div>
-        <div class="case-cost">★ 20000 / 💎100</div>
-    </div>
-</div>
+  <!-- Open button -->
+  <div class="open-wrap">
+    <button id="openBtn" class="open-btn">
+      Открытие <span class="loader" id="loader" hidden></span>
+    </button>
+  </div>
 
-<div class="bottom-menu">
-    <div>🏆<br>Конкурсы</div>
-    <div>⬆️<br>Апгрейд</div>
-    <div class="active">🎁<br>Кейсы</div>
-    <div>👥<br>Друзья</div>
-    <div>⚙️<br>Профиль</div>
-</div>
+  <!-- Case content -->
+  <h2 class="section-title">СОДЕРЖИМОЕ КЕЙСА</h2>
+  <section class="case-grid" id="caseGrid">
+    <!-- Filled by JS -->
+  </section>
 
-<script src="spin.js"></script>
+  <!-- Bottom nav -->
+  <nav class="tabbar">
+    <button class="tab"><span>🎁</span><small>Конкурсы</small></button>
+    <button class="tab"><span>⬆️</span><small>Апгрейд</small></button>
+    <button class="tab active"><span>🧰</span><small>Кейсы</small></button>
+    <button class="tab"><span>👥</span><small>Друзья</small></button>
+    <button class="tab"><span>⚙️</span><small>Профиль</small></button>
+  </nav>
+
+  <script src="spin.js"></script>
 </body>
 </html>
